@@ -1,15 +1,28 @@
 package com.PHPTravel;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.How;
 
 public class SignUpPage {
-	@FindBy(how = How.XPATH, using = "(//a[contains(text(),'My Account')])[2]")
-	private WebElement register;
+//	@FindBy(how = How.XPATH, using = "(//a[contains(text(),'My Account')])[2]")
+//	private WebElement register;
 	
-	@FindBy(how = How.XPATH, using = "(//a[contains(text(),'Sign Up')])[2]")
-	private WebElement signupp;
+	@FindBys({
+		@FindBy(xpath = "//*[@id=\"li_myaccount\"]/a")
+	})
+	private List<WebElement> myaccount;
+	
+	@FindBys({
+		@FindBy(xpath = "//*[@id=\"li_myaccount\"]/ul/li[2]/a")
+	})
+	private List<WebElement> signup;
+	
+//	@FindBy(how = How.XPATH, using = "(//a[contains(text(),'Sign Up')])[2]")
+//	private WebElement signupp;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"headersignupform\"]/div[3]/input")
 	private WebElement inputfname;
@@ -41,8 +54,8 @@ public class SignUpPage {
 	
 	
 	public void phpTravelFront2() {
-		register.click();
-		signupp.click();
+		myaccount.get(1).click();
+		signup.get(1).click();
 		inputfname.sendKeys("Jay");
 		inputsname.sendKeys("M");
 		mnumber.sendKeys("2345235233");
