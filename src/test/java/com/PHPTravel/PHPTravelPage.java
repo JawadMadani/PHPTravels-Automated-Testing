@@ -20,14 +20,14 @@ public class PHPTravelPage {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"adults\"]/option[3]")
 	private WebElement select3;
 	
-	@FindBy(how = How.XPATH, using = "//*[@id=\"dpd1\"]/input")
-	private WebElement clickcheckinbox;
+//	@FindBy(how = How.XPATH, using = "//*[@id=\"dpd1\"]/input")
+//	private WebElement clickcheckinbox;
 	
-	@FindBy(how = How.XPATH, using = "/html/body/div[14]/div[1]/table/tbody/tr[5]/td[5]")
-	private WebElement checkin;
+//	@FindBy(how = How.XPATH, using = "/html/body/div[14]/div[1]/table/tbody/tr[5]/td[5]")
+//	private WebElement checkin;
 	
-	@FindBy(how = How.XPATH, using = "/html/body/div[15]/div[1]/table/tbody/tr[5]/td[7]")
-	private WebElement checkout;
+//	@FindBy(how = How.XPATH, using = "/html/body/div[15]/div[1]/table/tbody/tr[5]/td[7]")
+//	private WebElement checkout;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"HOTELS\"]/form/div[3]/div[3]/button")
 	private WebElement clicksearch;
@@ -40,9 +40,9 @@ public class PHPTravelPage {
 		selectlondon.click();
 		howmanyadults.click();
 		select3.click();
-		clickcheckinbox.click();
-		checkin.click();
-		checkout.click();
+//		clickcheckinbox.click();
+//		checkin.click();
+//		checkout.click();
 		clicksearch.click();
 	}
 
